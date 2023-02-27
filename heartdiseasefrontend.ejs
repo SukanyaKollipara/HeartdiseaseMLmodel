@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+
+        <meta property="og:url" content="register.html" />
+
+        <meta property="og:site_name" content="E-Hospital" />
+
+        <meta property="og:title" content="E-Hospital" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:image" content="https://img1.wsimg.com/isteam/stock/Ddj9aVd" />
+
+        <meta property="og:locale" content="en_CA" />
+
+        <link href="css/heartdiseasefrontend.css" rel="stylesheet" type="text/css">
+
+        <title>HeartDiseaseFrontEnd</title>
+
+        <style>
+
+            .c{
+
+                padding: 300px;
+
+            }
+
+        </style>
+
+    </head>
+
+<body>
+
+    <header>
+
+       <%- include('../partials/header') -%>
+
+    </header>
+
+    <div class="container">
+
+        <div class="title">Heart Disease Prediction Form</div>
+
+        <div class="content">
+
+            <form action="/get_prediction" method="post">
+
+                <div class="user-details">
+
+                    <div class="input-box">
+
+                        <span class="details">Age</span>
+
+                        <input name="name" type="text" id="number" value="" placeholder="Enter your Age" required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="deatils">Sex</span>
+
+                        <select class = "dropdown" name="Sex" id="Sex">
+
+                            <option value="" selected disabled hidden >Choose Sex</option>
+
+                            <option value="0">Male</option>
+
+                            <option value="1">Female</option>
+
+
+                          </select>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Chest Pain</span>
+
+                        <select class = "dropdown" name="ChestPain" id="ChestPain">
+
+                            <option value="" selected disabled hidden >Choose chestpain type</option>
+
+                            <option value="0">ATA</option>
+
+                            <option value="1">NAP</option>
+
+                            <option value="2">ASY</option>
+
+                            <option value="3">TA</option>
+
+                          </select>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Resting BP</span>
+
+                        <input name="RestingBP" type="text" id="RestingBP" placeholder="Enter your Resting Blood Pressure" required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Cholestral</span>
+
+                        <input name="Cholestral" type="text" id="Cholestral" placeholder="Enter your Cholestral Level" required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Fasting BS</span>
+
+                        <select class = "dropdown" name="FastingBS" id="FastingBS" required>
+
+                            <option value="" selected disabled hidden >Choose fasting Blood Sugar</option>
+
+                            <option value="0">0</option>
+
+                            <option value="1">1</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Resting ECG</span>
+
+                        <select class = "dropdown" name="Resting ECG" id="Resting ECG" required>
+
+                            <option value="" selected disabled hidden >Choose ECG</option>
+
+                            <option value="0">Normal</option>
+
+                            <option value="1">ST</option>
+
+                            <option value="2">LVH</option>
+
+                        </select>
+
+                    </div>
+
+                   
+
+                    <div class="input-box">
+
+                        <span class="details">Max HR</span>
+
+                        <input name="number" type="text" id="number" placeholder="Enter Your Max Heart Rate" required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Exercising</span>
+
+                        <select class = "dropdown" name="Exercise" id="Exercise" required>
+
+                            <option value="" selected disabled hidden >Choose Exercise</option>
+
+                            <option value="1">Yes</option>
+
+                            <option value="0">No</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">Oldpeak</span>
+
+                        <input name="number" type="text" id="number" placeholder="Enter Your Oldpeak" required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <span class="details">ST_Slope</span>
+
+                        <select class = "dropdown" name="ST_Slope" id="ST_Slope" required>
+
+                            <option value="" selected disabled hidden >Choose ST_Slope</option>
+
+                            <option value="0">Up</option>
+
+                            <option value="1">Flat</option>
+
+                            <option value="2">Down</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="button">
+
+                    <input name="" type="submit" value="Check for Heart Disease">
+
+                </div>
+
+            </form>
+
+        </div>
+
+            <footer>
+
+          <%- include('../partials/footer-new') -%>
+
+         
+
+          </footer>
+
+    </div>
+
+</body>
+
+</html>
+
